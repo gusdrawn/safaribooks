@@ -940,7 +940,7 @@ class SafariBooks:
             (self.book_info["isbn"] if self.book_info["isbn"] else self.book_id),
             escape(self.book_title),
             authors,
-            escape(self.book_info["description"]),
+            escape(self.book_info["description"] or ""),
             subjects,
             ", ".join(escape(pub["name"]) for pub in self.book_info["publishers"]),
             escape(self.book_info["rights"]) if self.book_info["rights"] else "",
