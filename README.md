@@ -1,7 +1,7 @@
 # SafariBooks
-Download and generate *EPUB* of your favorite books from [*Safari Books Online*](https://www.safaribooksonline.com) library.  
-I'm not responsible for the use of this program, this is only for *personal* and *educational* purpose.  
-Before any usage please read the *O'Reilly*'s [Terms of Service](https://learning.oreilly.com/terms/).  
+Descarga y generar archivos EPUB de tu libros favoritos desde la libreria o'Reilly (learning.oreilly.com).
+NO ME HAGO RESPONSABLE DEL USO DE ESTE PROGRAMA, su proposito para uso personal y educacional.
+Antes de usarlo por favor lee los [Terminos y Condiciones](https://learning.oreilly.com/terms/)  
 
 ## Overview:
   * [Requirements & Setup](#requirements--setup)
@@ -11,36 +11,37 @@ Before any usage please read the *O'Reilly*'s [Terms of Service](https://learnin
 
 ## Requirements & Setup:
 ```shell
-$ git clone https://github.com/lorenzodifuccia/safaribooks.git
+$ git clone https://github.com/gusdrawn/safaribooks.git
 Cloning into 'safaribooks'...
 
 $ cd safaribooks/
 $ pip3 install -r requirements.txt
 
-OR
+ó
 
 $ pipenv install && pipenv shell
 ```  
 
-The program depends of only two **Python 3** modules:
+Este programa despende de solo dos modulos **Python 3**:
 ```python3
 lxml>=4.1.1
 requests>=2.20.0
 ```
   
-## Usage:
-It's really simple to use, just choose a book from the library and replace in the following command:
-  * X-es with its ID, 
-  * `email:password` with your own. 
+## Uso:
+Es bastante simple, solo elige un libro desde la libreria y reemplaza con el siguiente comando:
+  * X es el ID, 
+  * `email:password` con tu cuenta. 
 
 ```shell
 $ python3 safaribooks.py --cred "account_mail@mail.com:password01" XXXXXXXXXXXXX
 ```
 
-The ID is the digits that you find in the URL of the book description page:  
-`https://www.safaribooksonline.com/library/view/book-name/XXXXXXXXXXXXX/`  
-Like: `https://www.safaribooksonline.com/library/view/test-driven-development-with/9781491958698/`  
-  
+El ID son los digitos que puedes encontrar en la URL del libro en particular:
+https://learning.oreilly.com/library/view/ccnp-and-ccie/XXXXXXXXXXXX/`  
+Like: `https://learning.oreilly.com/library/view/ccnp-and-ccie/9780136555735/ch01.html`  
+
+#### English description only:
 #### Program options:
 ```shell
 $ python3 safaribooks.py --help
